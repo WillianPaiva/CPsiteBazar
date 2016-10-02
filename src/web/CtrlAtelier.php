@@ -1,33 +1,32 @@
 <?php
-$servername="localhost";
-$username="ateliertest";
-$password="ateliertest";
-$dbname="ateliers";
+class CtrlAtelie{
+
+    var $conn;
 
 
-//create the connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+    function __construct($servername, $username, $password, $dbname){
+        $conn = new mysqli($servername, $username, $password, $dbname);
+    }
 
 
-//check connection
+    function __destruct(){
+        $this->$conn->close();
+    }
+    //create the connection
 
-if($conn->connect_error){
-    die("Connection failed: ".$conn->connect_error);
+
+    //check connection
+    function checkConnection(){
+        return $this->$conn->connect_error;
+    }
+
+
+    function createAtelier($id, $titre, $date, $lieu, $laboratoire,
+                           $duree, $resume, $capacite, $table){
+        $sql = "INSERT INTO ".$table." VALUES(".$id.", ".$titre.", ".$date.
+             ", ".$lieu.", ".$laboratoire.", ".$duree.", ".$resume.", ".$capacite.")";
+    }
+
 }
-
-
-// $sql = "SELECT id, titre FROM ATELIER";
-// $result = $conn->query($sql);
-
-// if ($result->num_rows > 0) {
-//     // output data of each row
-//     while($row = $result->fetch_assoc()) {
-//         echo "id: " . $row["id"]. " - Name: " . $row["titre"]."<br>";
-//     }
-// } else {
-//     echo "0 results";
-// }
-
-$conn->close();
 
 ?>
