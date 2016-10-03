@@ -21,7 +21,17 @@ class CtrlAtelier{
     }
 
 
-    function createAtelier($titre, $theme, $date, $remarque, $lieu,
+    function createAtelier($id, $titre, $theme, $date, $remarque, $lieu,
+                           $duree, $resume, $capacite, $partenaires , $public_vise, $contenu, $table){
+        $sql = "UPDATE ".$table." SET titre=".$titre.",  theme=".$theme.", date=".$date.
+             ", remarque=".$remarque.", lieu=".$lieu.", duree=".$duree.", resume=".$resume.
+             ", capacite=".$capacite.", partenaires=".$partenaires.", public_vise=".$public_vise.
+             ",contenu=".$contenu." WHERE id=".$id;
+
+             return $this->conn->query($sql);
+    }
+
+    function upadateAtelier($titre, $theme, $date, $remarque, $lieu,
                            $duree, $resume, $capacite, $partenaires , $public_vise, $contenu, $table){
         $sql = "INSERT INTO ".$table." (titre, theme, date, remarque, lieu, duree, resume, capacite, partenaires, public_vise,contenu) ".
              " VALUES ('".$theme."', '".$titre."', '".$date."', '".$remarque.
