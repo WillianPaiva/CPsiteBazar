@@ -23,7 +23,8 @@ class CtrlAtelie{
 
     function createAtelier($id, $titre, $theme, $date, $remarque, $lieu,
                            $duree, $resume, $capacite, $partenaires , $public_vise, $contenu, $table){
-        $sql = "INSERT INTO ".$table." VALUES(".$id.", ".$theme.", ".$titre.", ".$date.", ".$remarque.
+        $sql = "INSERT INTO ".$table." (titre, theme, date, remarque, lieu, duree, resume, capacite, partenaires, public_vise,contenu) ".
+             " VALUES(".$theme.", ".$titre.", ".$date.", ".$remarque.
              ", ".$lieu.", ".$duree.", ".$resume.", ".$capacite.", ".$partenaires." , ".$public_vise.", ".$contenu.")";
         return $conn->query($sql);
     }
