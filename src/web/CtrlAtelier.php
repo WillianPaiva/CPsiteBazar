@@ -21,10 +21,11 @@ class CtrlAtelie{
     }
 
 
-    function createAtelier($id, $titre, $date, $lieu, $laboratoire,
-                           $duree, $resume, $capacite, $table){
-        $sql = "INSERT INTO ".$table." VALUES(".$id.", ".$titre.", ".$date.
-             ", ".$lieu.", ".$laboratoire.", ".$duree.", ".$resume.", ".$capacite.")";
+    function createAtelier($id, $titre, $theme, $date, $remarque, $lieu,
+                           $duree, $resume, $capacite, $partenaires , $public_vise, $contenu, $table){
+        $sql = "INSERT INTO ".$table." VALUES(".$id.", ".$theme.", ".$titre.", ".$date.", ".$remarque.
+             ", ".$lieu.", ".$duree.", ".$resume.", ".$capacite.", ".$partenaires." , ".$public_vise.", ".$contenu.")";
+        return $conn->query($sql);
     }
 
 }
