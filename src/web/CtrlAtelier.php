@@ -26,10 +26,19 @@ class CtrlAtelier{
         $sql = "INSERT INTO ".$table." (titre, theme, date, remarque, lieu, duree, resume, capacite, partenaires, public_vise,contenu) ".
              " VALUES ('".$theme."', '".$titre."', '".$date."', '".$remarque.
              "', '".$lieu."', '".$duree."', '".$resume."', '".$capacite."', '".$partenaires."', '".$public_vise."', '".$contenu."');";
-        if ($this->conn->query($sql) === TRUE){
-            return 'reussi';
-        }
-        return 'failed: '.$sql;
+        return $this->conn->query($sql);
+    }
+
+    //delete atelier by id
+    function deleteAtelier($id, $table){
+        $sql = "DELETE FROM ".$table." WHERE id=".$id;
+        return $conn->query($sql);
+    }
+
+    //get atelier by id
+    function getAtelier($id, $table){
+        $sql = "SELECT * FROM ".$table." WHERE id=".$id;
+        return $conn->query($sql);
     }
 
 }
