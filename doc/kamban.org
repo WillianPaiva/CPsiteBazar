@@ -3,8 +3,8 @@
 |      | to do  | on going | done |
 |------+--------+----------+------|
 | All  | T6     |          | T1   |
-| US#2 |        |  T3      | T2   |
-| US#3 | T5     | T4       |      |
+| US#2 |        | T3       | T2   |
+| US#3 | T5     |          | T4   |
 
 **** Liste des tâches
 + T1 : requête SQL pour créer la table Atelier
