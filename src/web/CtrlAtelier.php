@@ -31,10 +31,10 @@ class CtrlAtelier{
              return $this->conn->query($sql);
     }
 
-    function upadateAtelier($titre, $theme, $date, $remarque, $lieu,
+    function upadteAtelier($titre, $theme, $date, $remarque, $lieu,
                            $duree, $resume, $capacite, $partenaires , $public_vise, $contenu, $table){
         $sql = "INSERT INTO ".$table." (titre, theme, date, remarque, lieu, duree, resume, capacite, partenaires, public_vise,contenu) ".
-             " VALUES ('".$theme."', '".$titre."', '".$date."', '".$remarque.
+             " VALUES ('".$titre."', '".$theme."', '".$date."', '".$remarque.
              "', '".$lieu."', '".$duree."', '".$resume."', '".$capacite."', '".$partenaires."', '".$public_vise."', '".$contenu."');";
         return $this->conn->query($sql);
     }
