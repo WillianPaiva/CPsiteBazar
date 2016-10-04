@@ -22,10 +22,10 @@ echo '<!doctype html>
             <!-- Table -->
             <table class="table">';
 
-$controler = new CtrlListAteliers('dbserve', 'acleret' , 'azerty' , 'acleret');
+$controler = new CtrlListAteliers('dbserver', 'acleret' , 'azerty' , 'acleret');
 $atribute=isset($_GET['row']) && file_exists($_GET['row'])
          ? $_GET['row'] : 'date';
-$result = $controler->getListAteliers('ATELIERS', $atribute);
+$result = $controler->getListAteliers('ATELIER', $atribute);
 while($row = $result->fetch_assoc()) {
     echo "<tr><td>".$row["titre"]."</td><td>".$row["theme"]."</td><td>"
                    .$row["date"]."</td></tr>";
