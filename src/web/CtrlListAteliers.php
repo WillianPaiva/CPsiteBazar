@@ -18,9 +18,10 @@ class CtrlListAteliers{
     }
 
     function getListAteliers($table, $row){
-        $sql = "SELECT * FROM '".$table."' ORDER BY ".$row.";";
-        return $this->conn->query($sql);
-    }
+        $sql = "SELECT * FROM ".$table." ORDER BY ".$row.";";
+	$result=$this->conn->query($sql);
+        return $result;
+}
 
 }
 ?>
