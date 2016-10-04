@@ -6,13 +6,5 @@ if ($test->checkConnection()) {
     die("Connection failed: " .$test->checkConnection());
 }
 
-echo 'hello1<br/> ';
-echo $test->getListAteliers('ATELIER');
-echo '<br/>';
-echo $test->getTitreOrder('ATELIER');
-echo '<br/>';
-echo $test->getDateOrder('ATELIER');
-echo '<br/>';
-echo $test->getThemeOrder('ATELIER');
-echo '<br/>hello5<br/>';
+echo $test->getListAteliers('ATELIER','date');
 ?>
