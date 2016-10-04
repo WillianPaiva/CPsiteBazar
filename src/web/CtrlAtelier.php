@@ -31,7 +31,7 @@ class CtrlAtelier{
              return $this->conn->query($sql);
     }
 
-    function upadteAtelier($titre, $theme, $date, $remarque, $lieu,
+    function updateAtelier($titre, $theme, $date, $remarque, $lieu,
                            $duree, $resume, $capacite, $partenaires , $public_vise, $contenu, $table){
         $sql = "INSERT INTO ".$table." (titre, theme, date, remarque, lieu, duree, resume, capacite, partenaires, public_vise,contenu) ".
              " VALUES ('".$titre."', '".$theme."', '".$date."', '".$remarque.
