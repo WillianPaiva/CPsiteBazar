@@ -27,8 +27,8 @@ class CtrlAtelier{
              ", remarque=".$remarque.", lieu=".$lieu.", duree=".$duree.", resume=".$resume.
              ", capacite=".$capacite.", partenaires=".$partenaires.", public_vise=".$public_vise.
              ",contenu=".$contenu." WHERE id=".$id;
-
-             return $this->conn->query($sql);
+        $res=$this->conn->query($sql);
+        return $res;
     }
 
     function updateAtelier($titre, $theme, $date, $remarque, $lieu,
@@ -36,19 +36,22 @@ class CtrlAtelier{
         $sql = "INSERT INTO ".$table." (titre, theme, date, remarque, lieu, duree, resume, capacite, partenaires, public_vise,contenu) ".
              " VALUES ('".$titre."', '".$theme."', '".$date."', '".$remarque.
              "', '".$lieu."', '".$duree."', '".$resume."', '".$capacite."', '".$partenaires."', '".$public_vise."', '".$contenu."');";
-        return $this->conn->query($sql);
+        $res=$this->conn->query($sql);
+        return $res;
     }
 
     //delete atelier by id
     function deleteAtelier($id, $table){
         $sql = "DELETE FROM ".$table." WHERE id=".$id;
-        return $conn->query($sql);
+        $res=$this->conn->query($sql);
+        return $res;
     }
 
     //get atelier by id
     function getAtelier($id, $table){
         $sql = "SELECT * FROM ".$table." WHERE id=".$id;
-        return $conn->query($sql);
+        $res=$this->conn->query($sql);
+        return $res;
     }
 
 }
