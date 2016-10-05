@@ -28,9 +28,10 @@ $atribute=isset($_GET['row']) && file_exists($_GET['row'])
 $result = $controler->getListAteliers('ATELIER', $atribute);
 while($row = $result->fetch_assoc()) {
     echo "<tr><td>".$row["titre"]."</td><td>".$row["theme"]."</td><td>"
-                   .$row["date"]."</td></tr>";
+                   .$row["date"]."</td><td> <a type=\"button\" class=\"btn btn-default\" aria-label=\"Left Align\" href=\"ViewAtelier.php?id=".$row["id"]."\">EDIT</a> </td></tr>";
 }
 echo'     </table>
+                <a type="button" class="btn btn-default" aria-label="Left Align" href="ViewAtelier.php">NEW</a>
         </div>
     </body>
 </html>';
