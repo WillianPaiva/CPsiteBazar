@@ -2,5 +2,5 @@
 
 | US# | #commit                                  |
 |-----+------------------------------------------|
-| US2 | d31d8ee1e7620a8a0be2dc5cd6863729c663861a |
+| US3 | [[https://github.com/WillianPaiva/CPsiteBazar/commit/60e9b96dc82149c602d4ae063d857c4eecc8db0f][60e9b96dc82149c602d4ae063d857c4eecc8db0f]] |
 |     |                                          |
