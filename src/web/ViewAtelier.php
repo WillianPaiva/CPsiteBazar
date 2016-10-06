@@ -188,7 +188,7 @@ function getFieldAsText($text)
     <form class="well col-lg-6 colo-lg-offset-4 col-md-7 col-md-offset-3
  col-xs-8 col-xs-offset-2" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
     
-    <legend><?php echo getHtmlTitle(); ?></legend>
+    <legend class="title"><?php echo getHtmlTitle(); ?></legend>
     <div class="form-group">
     <label for="texte">Title : </label>
     <span class = "error">* <?php global $titleErr; echo $titleErr; ?> </span>

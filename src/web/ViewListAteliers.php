@@ -19,10 +19,13 @@ echo '<!doctype html>
     <body>
         <div class="panel panel-default">
             <!-- Default panel contents -->
-            <div class="panel-heading">Ateliers</div>
+            <div class="panel-heading title">List of Ateliers</div>
 
+<div class="well col-lg-8 col-lg-offset-2 
+col-md-9 col-md-offset-1
+col-xs-9 col-xs-offset-1">
             <!-- Table -->
-            <table class="well table">';
+            <table class="table">';
 
 
 
@@ -37,6 +40,7 @@ while($row = $result->fetch_assoc()) {
 echo'     </table>
                 <a type="button" class="btn btn-default" aria-label="Left Align" href="ViewAtelier.php">NEW</a>
         </div>
+</div>
     </body>
 </html>';
     ?>
